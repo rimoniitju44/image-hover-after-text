@@ -1,0 +1,89 @@
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+body {
+  margin: 0;
+  padding: 40px 0 0 0;
+  font-family: sans-serif;
+  color: #333;
+  line-height: 140%;
+  background-color: #F5F3F5;
+  border-top: 10px solid #01579b;
+}
+.demo {
+  display: inline-block;
+  width: 24%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+img {
+  border: none;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 0 15px;
+}
+.flip {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    max-width: 100%;
+    background-color: #2266a5;
+    color: #fff;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translateZ(0);
+}
+
+.flip  img {
+    vertical-align: top;
+    max-width: 100%;
+}
+
+.flip figcaption {
+    background-color: #135796;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+}
+
+
+
+.flip *, .flip, .flip :before,
+.flip *:after, .flip *:before, .flip *:after {
+    box-sizing: border-box;
+    transition: all .35s ease;
+}
+
+
+.flip  figcaption {
+    opacity: 0;
+}
+
+.flip:hover img {
+    opacity: 0;
+}
+
+.flip:hover figcaption {
+    opacity: 1;
+    transition-delay: 0.14s;
+}
+
+.flip figcaption {
+    transform: rotate3d(1, 1, 0, 100deg);
+}
+
+.flip:hover  img {
+    transform: rotate3d(-1, -1, 0, 100deg);
+}
+
+.flip:hover figcaption {
+    transform: rotate3d(0, 0, 0, 0deg);
+}
